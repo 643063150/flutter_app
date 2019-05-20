@@ -144,9 +144,10 @@ class NewsListPageState extends State<NewsListPage> {
 
   Widget getItemWidget(BuildContext, int pos) {
     return Card(
-      child: new GestureDetector(
+      margin: EdgeInsets.fromLTRB(15, 5, 15, 5),
+      child: new InkWell(
         child: Container(
-          height: 100,
+          height: 115,
 //        child: Container(
 
 //          decoration: UnderlineTabIndicator(
@@ -157,7 +158,7 @@ class NewsListPageState extends State<NewsListPage> {
               Container(
                 child: new FadeInImage.memoryNetwork(
                   width: 120,
-                  height: 100,
+                  height: 115,
                   image: newslist[pos].thumbnailPicS,
                   placeholder: kTransparentImage,
                   fit: BoxFit.cover,
